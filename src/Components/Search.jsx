@@ -1,12 +1,12 @@
 import * as React from 'react';
 import { Text, SafeAreaView, View, TextInput, StyleSheet } from 'react-native';
-//import { Ionicons } from '@expo/vector-icons';
+import Icon from 'react-native-vector-icons/dist/Ionicons';
 
 export const Search = () =>  {
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={styles.container} >
       <View style={styles.inputContainer} >
-        {/* <Ionicons name="search" size={24} color="gray" /> */}
+        <Icon name="search-circle" size={24} color="gray" /> 
         <TextInput placeholderTextColor={'white'} placeholder="Search" style={styles.textInput} />
       </View>
     </SafeAreaView>
@@ -15,11 +15,11 @@ export const Search = () =>  {
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 30,
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    marginTop: 70,
+    // flex: 1,
+    // backgroundColor: '#fff',
+    // alignItems: 'center',
+    // justifyContent: 'center',
   },
   inputContainer: {
     width: '90%',
@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingHorizontal: 10,
     borderWidth: 1,
-    borderColor: 'gray',
+    borderColor: '#fb923c',
     borderRadius: 6,
   },
   textInput: {

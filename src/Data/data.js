@@ -129,7 +129,7 @@ export const data =
     "id": 6,
   "image": "https://media.istockphoto.com/photos/one-pan-spaghetti-bolognese-picture-id1413286185?k=20&m=1413286185&s=612x612&w=0&h=91HPbUdBO8T5J80foYojeW-duzstm6h4HAunXY-0dYE=",
   "title": "Pasta",
-  "category": "Treding",
+  "category": "Recent",
   "servings": 10,
   "ingredients": [
     {
