@@ -2,9 +2,10 @@ import React from 'react'
 import { Text, FlatList,Image, View, TouchableOpacity } from 'react-native'
 import { data } from '../Data/data'
 import { Search } from '../Components/Search'
+import { useNavigation } from '@react-navigation/native'
 
 const ListData = () => {
-  
+  const navigation = useNavigation()
 
   const renderItem = ({item}) => {
     // const treding = data.filter(listdata => listdata.category === 'Trending')
@@ -14,13 +15,17 @@ const ListData = () => {
         {data.filter(listdata => listdata.category === 'Treding')
         ?
         <TouchableOpacity
-        onPress={() => console.log(item.id)}
+        // onPress={() => console.log(item.id)}
+        onPress={() => navigation.navigate("RecipeDetail", {
+          // recipe: item.title, recipe: item.id
+          item
+      })}
         >
       <Image
           style={{ width: 160, height: 200, margin: 3, borderRadius: 3 }}
           source={{ uri: item.image }} />
           <View style={{alignItems:'center'}}>
-          <Text style={{color:'white', fontWeight:'bold' }}>{item.title}</Text>
+          <Text style={{color:'white', fontWeight:'bold', fontFamily:'Poppins-Bold' }}>{item.title}</Text>
           </View>
           </TouchableOpacity>
         :
@@ -31,7 +36,7 @@ const ListData = () => {
           style={{ width: 160, height: 200, margin: 3, borderRadius: 3 }}
           source={{ uri: item.image }} />
           <View style={{alignItems:'center'}}>
-          <Text style={{color:'white', fontWeight:'bold' }}>{item.title}</Text>
+          <Text style={{color:'white', fontWeight:'bold', fontFamily:'Poppins-Bold' }}>{item.title}</Text>
           </View>
           </TouchableOpacity>
         }
